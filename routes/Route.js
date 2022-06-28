@@ -6,7 +6,7 @@ const UrunlerModel = require("../models/UrunlerModel");
 //TÜM HABERLERİ LİSTELER
 router.get("/urunler", async (req, res) => {
     try {
-        const data = await UrunlerModel.findOne();
+        const data = await UrunlerModel.find();
         res.json(data);
     } catch (err) {
         res.json({
